@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brand-green: #00856f;
+    --brand-green-hover: #00453a;
+    --brand-green-light: #dce9e2;
+    --brand-green-light-02: #f7f9f9;
+
+    --brand-beige: #fffaf1;
+
+    --gray-headline: #061800;
+    --gray-paragraph: #384633;
+
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "DM sans", sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    width: 375px;
+    margin: 0 auto;
+    background-color: var(--brand-green-light);
+}
+
+h4 {
+    margin: 4rem 0 1.6rem 0;
+    color: var(--brand-green);
+    font-size: 1.4rem;
+}
+
+h1 {
+    font-size: 3.4rem;
+}
+
+header p {
+    margin: 2.4rem 0 3.2rem 0;
+    font-size: 1.8rem;
+}
+
+button {
+    width: 263px;
+    height: 52px;
+
+    color: white;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--brand-green);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 1.6rem;
+}
+
+#ImgMulherDeVerde {
+    margin-top: 6rem;
+}
+
