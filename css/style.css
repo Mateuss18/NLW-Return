@@ -9,40 +9,68 @@
     --brand-green-hover: #00453a;
     --brand-green-light: #dce9e2;
     --brand-green-light-02: #f7f9f9;
-
     --brand-beige: #fffaf1;
-
     --gray-headline: #061800;
     --gray-paragraph: #384633;
 
     font-size: 62.5%;
+
+    --nav-height: 7.2rem
 }
 
 body {
     font-family: "DM sans", sans-serif;
     font-size: 1.6rem;
     text-align: center;
-    width: 375px;
-    margin: 0 auto;
-    background-color: var(--brand-green-light);
+    background-color: var(--brand-green-light-02);
+
+    overflow: overlay;
 }
 
-h4 {
-    margin: 4rem 0 1.6rem 0;
+.wrapper{
+    width: 37.5rem;
+    margin-inline: auto;
+}
+
+ul{
+    list-style: none;
+}
+
+ /* ==== HEADER =========================================== */
+header{
+    margin-top: calc(4.1rem + var(--nav-height));
+}
+
+header::before{
+    content: "";
+    background-color: var(--brand-green-light);
+    width: 100%;
+    height: calc(108rem + var(--nav-height));
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header h4 {
+    margin-bottom: 1.6rem;
     color: var(--brand-green);
     font-size: 1.4rem;
 }
 
-h1 {
+header h1 {
     font-size: 3.4rem;
 }
 
 header p {
     margin: 2.4rem 0 3.2rem 0;
+    max-width: 32rem;
     font-size: 1.8rem;
 }
 
-button {
+header button {
     width: 263px;
     height: 52px;
 
@@ -59,7 +87,200 @@ button {
     gap: 1.6rem;
 }
 
-#ImgMulherDeVerde {
+header #ImgMulherDeVerde{
+    display: block;
+    margin-inline: auto;
     margin-top: 6rem;
+    object-position: 0 2rem;
 }
 
+.container {
+    background-color: var(--brand-beige);
+    border: solid 1px var(--brand-green-light);
+    border-radius: 6px;
+    padding: 5rem 0;
+    margin: 0 auto;
+    width: 33rem;
+}
+
+.container h2 {
+    font-size: 4.8rem;
+    font-weight: bold;
+}
+
+.container p {
+    margin-top: 0.8rem;
+    color: var(--brand-green);
+}
+
+.container p:nth-child(2),
+.container p:nth-child(4) {
+    padding-bottom: 6rem;
+}
+
+.servicos{
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+}
+
+.servicos h4{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+}
+
+.servicos p{
+    margin: 0 auto;
+    font-size: 3.0rem;
+    font-weight: bold;
+    max-width: 30rem;
+    color: var(--gray-headline);
+}
+
+section{
+    background-color: white;
+    margin-bottom: 3.2rem;
+}
+
+section h5{
+    font-size: 2.4rem;
+    color: var(--gray-headline);
+}
+
+
+/*==== NAVIGATION ===========================================*/
+nav{
+    display: flex;
+
+    height: var(--nav-height);
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 100;
+    width: 100%;
+}
+
+nav .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+nav.scroll {
+    background-color: var(--brand-green);
+}
+
+nav.scroll svg:nth-child(1) path{
+    fill: white;
+}
+
+nav.scroll .open-menu svg:nth-child(1) path{
+    stroke: white;
+}
+
+nav button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav .menu,
+nav .close-menu{
+    position: fixed;
+}
+
+/*==== MENU EXPANDED ===========================================*/
+body.menu-expanded{
+    overflow: hidden;
+}
+
+body.menu-expanded > :not(nav){
+    visibility: hidden;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .open-menu{
+    display: none;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-expanded .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--brand-green);
+
+    width: 100vw;
+    height: 100vh;
+}
+
+body.menu-expanded nav{
+    position: relative;
+}
+
+body.menu-expanded .menu .sections{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: calc(6rem + var(--nav-height));
+    gap: 4.8rem;
+}
+
+body.menu-expanded .menu .sections a{
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+
+body.menu-expanded .menu button{
+    background-color: white;
+    color: var(--brand-green);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    height: 5.5rem;
+    padding: 0 3.2rem;
+    margin-bottom: 8rem;
+
+    display: inline-block;
+
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+}
+
+.menu .socialLinks{
+    display: flex;
+    gap: 3.2rem;
+    justify-content: center;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button{
+    position: relative;
+    z-index: 100;
+}
+
+body.menu-expanded .logo path{
+    fill: white;
+}
+
+body.menu-expanded button path{
+    stroke: white;
+}
