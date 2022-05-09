@@ -15,7 +15,7 @@
     <body onscroll="onScroll()">
         <nav id="navigation">
             <div class="wrapper">
-                <a class="logo" href="">
+                <a class="logo" href="#home">
                     <svg
                         width="133"
                         height="18"
@@ -68,9 +68,9 @@
 
                 <div class="menu">
                     <ul class="sections">
-                        <li><a href="">Início</a></li>
+                        <li><a onclick="closeMenu()" href="#home">Início</a></li>
                         <li><a href="">Sobre</a></li>
-                        <li><a href="">Serviços</a></li>
+                        <li><a onclick="closeMenu()" href="#servicos">Serviços</a></li>
                         <li><a href="">Depoimentos</a></li>
 
                         <button>Agende sua consulta</button>
@@ -126,91 +126,107 @@
             </div>
         </nav>
 
-        <header class="wrapper">
-            <h4>BOAS-VINDAS A DOCTORCARE👋</h4>
-            <h1>Assistencia médica simplificada para todos</h1>
-            <p>
-                Os médicos da DoctorCare vão além dos sintomas para tratar a
-                causa raiz de sua doença e proporcionar uma cura a longo prazo.
-            </p>
-            <button>
-                <img src="./assets/whatsapp.svg" alt="" />
-                AGENDE SUA CONSULTA
-            </button>
-            <img
-                src="/assets/Foto.svg"
-                alt="Mulher negra com roupa verde sorrindo com a mão no coração"
-                id="ImgMulherDeVerde"
-            />
-        </header>
-
-        <div class="container">
-            <h2>+3.500</h2>
-            <p>Pacientes atendidos</p>
-            <h2>+15</h2>
-            <p>Especialistas disponíveis</p>
-            <h2>+10</h2>
-            <p>Anos no mercado</p>
-        </div>
-
-        <div class="servicos">
-            <h4>Serviços</h4>
-            <p>Como podemos ajudá-lo a se sentir melhor?</p>
-        </div>
-
-        <section>
-            <img src="/assets/correto.svg" alt="" />
-            <h5>Problemas digestivos</h5>
-            <p>
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim.
-            </p>
+        <section id="home">
+            <div class="wrapper">
+                <header>
+                    <h4>BOAS-VINDAS A DOCTORCARE👋</h4>
+                    <h1>Assistencia médica simplificada para todos</h1>
+                </header>
+                <p>
+                    Os médicos da DoctorCare vão além dos sintomas para tratar a
+                    causa raiz de sua doença e proporcionar uma cura a longo prazo.
+                </p>
+                <button>
+                    <img src="./assets/whatsapp.svg" alt="" />
+                    AGENDE SUA CONSULTA
+                </button>
+                <img src="./assets/Foto.svg"
+                    alt="Mulher negra com roupa verde sorrindo com a mão no coração"
+                    id="ImgMulherDeVerde" />
+            </div>
+            <div class="container">
+                <h2>+3.500</h2>
+                <p>Pacientes atendidos</p>
+                <h2>+15</h2>
+                <p>Especialistas disponíveis</p>
+                <h2>+10</h2>
+                <p>Anos no mercado</p>
+            </div>
         </section>
 
-        <section>
-            <img src="/assets/correto.svg" alt="" />
-            <h5>Problemas digestivos</h5>
-            <p>
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim.
-            </p>
+        <section id="servicos">
+            <div class="wrapper">
+                <header>
+                    <h4>Serviços</h4>
+                    <h2>Como podemos ajudá-lo a se sentir melhor?</h2>
+                </header>
+                <div class="cards">
+                    <div class="card">
+                        <img src="/assets/correto.svg" alt="" />
+                        <h5>Problemas digestivos</h5>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                            amet sint. Velit officia consequat duis enim.
+                        </p>
+                    </div>
+            
+                    <div class="card">
+                        <img src="/assets/correto.svg" alt="" />
+                        <h5>Saúde Hormonal</h5>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                            amet sint. Velit officia consequat duis enim.
+                        </p>
+                    </div>
+            
+                    <div class="card">
+                        <img src="/assets/correto.svg" alt="" />
+                        <h5>Cuidados Pediátricos</h5>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                            amet sint. Velit officia consequat duis enim.
+                        </p>
+                    </div>
+            
+                    <div class="card">
+                        <img src="/assets/correto.svg" alt="" />
+                        <h5>Autoimune e Inflamação</h5>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                            amet sint. Velit officia consequat duis enim.
+                        </p>
+                    </div>
+            
+                    <div class="card">
+                        <img src="/assets/correto.svg" alt="" />
+                        <h5>Saúde do Coração</h5>
+                        <p>
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                            amet sint. Velit officia consequat duis enim.
+                        </p>
+                    </div>
+            
+                </div>
+            </div>
         </section>
 
-        <section>
-            <img src="/assets/correto.svg" alt="" />
-            <h5>Problemas digestivos</h5>
-            <p>
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim.
-            </p>
-        </section>
+        <section id="about">
+            <div class="wrapper">
+                <header>
+                    <h4>Sobre nós</h4>
+                    <h2>Entenda quem somos e por que existimos</h2>
+                </header>
+                <div class="content">
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                    </p>
 
-        <section>
-            <img src="/assets/correto.svg" alt="" />
-            <h5>Problemas digestivos</h5>
-            <p>
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim.
-            </p>
+                    <img src="/assets/FotoMedico.svg" alt="">
+                </div>
+            </div>
         </section>
-
-        <section>
-            <img src="/assets/correto.svg" alt="" />
-            <h5>Problemas digestivos</h5>
-            <p>
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim.
-            </p>
-        </section>
-
-        <section>
-            <img src="/assets/correto.svg" alt="" />
-            <h5>Problemas digestivos</h5>
-            <p>
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim.
-            </p>
-        </section>
+        <!-- ScrollRevealLib -->
+        <script src="https://unpkg.com/scrollreveal"></script>
         <script src="script.js"></script>
     </body>
 </html>

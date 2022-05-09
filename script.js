@@ -12,6 +12,17 @@ function closeMenu() {
 }
 
 function openMenu() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
     document.body.classList.add("menu-expanded")
 }
+
+ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 700,
+}).reveal(`
+    #home,
+    #home img,
+    #home .container,
+    #servicos,
+    #servicos .header,
+    #servicos .card`)
