@@ -5,13 +5,15 @@
 }
 
 :root {
-    --brand-green: #00856f;
-    --brand-green-hover: #00453a;
-    --brand-green-light: #dce9e2;
-    --brand-green-light-02: #f7f9f9;
-    --brand-beige: #fffaf1;
-    --gray-headline: #061800;
-    --gray-paragraph: #384633;
+    --hue: 1;
+    --primary-color: hsl(var(--hue), 100%, 26%);
+    --hover-color: hsl(var(--hue), 100%, 14%);
+    --bg-light: hsl(calc(var(--hue) - 22), 23%, 89%);
+    --bg-light-02: hsl(180, 14%, 97%);
+
+    --brand-beige: hsl(39, 100%, 97%);
+    --gray-headline: hsl(calc(var(--hue) - 22), 100%, 5%);
+    --gray-paragraph: hsl(104, 16%, 24%);
 
     font-size: 62.5%;
 
@@ -32,7 +34,7 @@ body {
     font-family: "DM sans", sans-serif;
     font-size: 1.6rem;
     text-align: center;
-    background-color: var(--brand-green-light-02);
+    background-color: var(--bg-light-02);
 
     overflow: overlay;
 
@@ -58,7 +60,7 @@ section {
 }
 
 section header h4{
-    color: var(--brand-green);
+    color: var(--primary-color);
     font-size: 1.4rem;
     font-weight: bold;
     line-height: 150%;
@@ -77,6 +79,39 @@ section header h2{
 
 section header h1{
     font-size: 3.4rem;
+}
+
+.btn-schedule{
+    width: 263px;
+    height: 52px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-decoration: none;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1.6rem 3.2rem;
+    width: fit-content;
+    gap: 1.6rem;
+
+    transition: background .3s;
+}
+
+.btn-schedule:hover{
+    background-color: var(--hover-color);
+}
+
+.socialLinks {
+    display: flex;
+    gap: 3.2rem;
 }
 
 /*==== NAVIGATION ===========================================*/
@@ -99,7 +134,7 @@ nav .wrapper{
 }
 
 nav.scroll {
-    background-color: var(--brand-green);
+    background-color: var(--primary-color);
 }
 
 nav.scroll svg:nth-child(1) path{
@@ -121,6 +156,13 @@ nav .close-menu{
     position: fixed;
 }
 
+nav .logo path[fill*="00856F"] {
+    fill: var(--primary-color);
+}
+nav button.open-menu path{
+    stroke: var(--primary-color);
+}
+
 /* ==== HOME =========================================== */
 #home{
     padding-top: calc(4.1rem + var(--nav-height));
@@ -128,7 +170,7 @@ nav .close-menu{
 
 #home::before{
     content: "";
-    background-color: var(--brand-green-light);
+    background-color: var(--bg-light);
     width: 100%;
     height: calc(108rem + var(--nav-height));
     display: block;
@@ -144,24 +186,6 @@ nav .close-menu{
     font-size: 1.8rem;
 }
 
-#home button {
-    width: 263px;
-    height: 52px;
-
-    color: white;
-    font-weight: bold;
-    border-radius: 40px;
-    border: none;
-    cursor: pointer;
-    background-color: var(--brand-green);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    gap: 1.6rem;
-}
-
 #home #ImgMulherDeVerde{
     display: block;
     margin-inline: auto;
@@ -171,7 +195,7 @@ nav .close-menu{
 
 #home .container {
     background-color: var(--brand-beige);
-    border: solid 1px var(--brand-green-light);
+    border: solid 1px var(--bg-light);
     border-radius: 6px;
     padding: 5rem 0;
     margin: 0 auto;
@@ -225,7 +249,7 @@ body.menu-expanded .close-menu {
 body.menu-expanded .menu{
     top: 0;
     left: 0;
-    background-color: var(--brand-green);
+    background-color: var(--primary-color);
 
     width: 100vw;
     height: 100vh;
@@ -242,34 +266,43 @@ body.menu-expanded .menu .sections{
     gap: 4.8rem;
 }
 
-body.menu-expanded .menu .sections a{
+body.menu-expanded .menu .sections li a{
     font-size: 2.4rem;
     font-weight: 700;
     text-decoration: none;
     color: white;
 }
 
-body.menu-expanded .menu button{
+body.menu-expanded .menu .sections li a:hover{
+    transition: 50s;
+    border-bottom: 5px solid white;
+}
+
+body.menu-expanded .menu a.button{
     background-color: white;
-    color: var(--brand-green);
+    color: var(--primary-color);
     text-transform: uppercase;
     font-size: 1.8rem;
     font-weight: 700;
+    text-decoration: none;
 
-    height: 5.5rem;
-    padding: 0 3.2rem;
+    padding: 16px 32px;
     margin-bottom: 8rem;
 
     display: inline-block;
 
-    border: none;
     border-radius: 4rem;
+    border: white solid 2px;
     cursor: pointer;
+    transition: 300ms;
+}
+
+body.menu-expanded .menu a.button:hover{
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .menu .socialLinks{
-    display: flex;
-    gap: 3.2rem;
     justify-content: center;
 }
 
@@ -302,18 +335,21 @@ body.menu-expanded button path{
     gap: 1.6rem;
     text-align: left;
     padding: 2.4rem;
-    border: 1px solid var(--brand-green-light);
+    border: 1px solid var(--bg-light);
     border-radius: 6px;
     background-color: white;
 }
 
 #servicos .card h5{
     font-size: 2.4rem;
-    color: var(--gray-headline);
 }
 
 #servicos .card p{
     line-height: 150%;
+}
+
+#servicos .card circle{
+    fill: var(--bg-light);
 }
 
 /*==== ABOUT =========================================== */
@@ -334,4 +370,83 @@ body.menu-expanded button path{
     margin-bottom: 6rem;
     line-height: 150%;
     text-align: justify;
+}
+
+/*==== CONTACT =========================================== */
+#contact{
+    text-align: left;
+    background-color: white;
+}
+
+#contact h2{
+    line-height: 3.8rem;
+}
+
+#contact ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin: 3.2rem 0;
+}
+
+#contact li{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.8rem;
+}
+
+#contact a.btn-schedule {
+    margin: 0 0 6rem 0;
+}
+
+#contact li path{
+    stroke: var(--primary-color);
+}
+
+/*==== FOOTER =========================================== */
+footer{
+    padding-block: 6rem;
+    background-color: var(--primary-color);
+
+    text-align: left;
+    color: white;
+}
+
+footer .logo svg{
+    width: 23.6rem;
+    height: 3.1rem;
+}
+
+footer .logo path{
+    fill: white;
+}
+
+footer p{
+    color: var(--brand-beige);
+    padding: 2.4rem 0 3.2rem 0;
+    line-height: 2;
+}
+
+/* BACK TO TOP */
+#backToTopButton{
+    position: fixed;
+
+    bottom: 1rem;
+    right: 2.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(100%);
+    transition: 300ms;
+}
+
+#backToTopButton.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTopButton circle{
+    fill: var(--primary-color);
 }
