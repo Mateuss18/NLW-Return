@@ -9,12 +9,13 @@
     --primary-color: hsl(var(--hue), 100%, 26%);
     --hover-color: hsl(var(--hue), 100%, 14%);
     --bg-light: hsl(calc(var(--hue) - 22), 23%, 89%);
-    --bg-light-02: hsl(180, 14%, 97%);
+    --bg-light-02: hsl(calc(var(--hue) - 10), 12%, 97%);
+    --bg-light-03: hsl(calc(var(--hue)), 100%, 98%);
 
     --brand-beige: hsl(39, 100%, 97%);
-    --gray-headline: hsl(calc(var(--hue) - 22), 100%, 5%);
-    --gray-paragraph: hsl(104, 16%, 24%);
-
+    --gray-headline: hsl(calc(var(--hue) + 40), 100%, 5%);
+    --gray-paragraph: hsl(calc(var(--hue) - 66), 16%, 24%);
+    --swiper-theme-color: var(-primary-color);
     font-size: 62.5%;
 
     --nav-height: 7.2rem
@@ -365,6 +366,75 @@ body.menu-expanded button path{
     fill: var(--bg-light);
 }
 
+/*==== TESTIMONIAL =========================================== */
+#testimonial{
+    background-color: white;
+}
+
+#testimonial .testimonials{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+#testimonial .testimonials img{
+    width: 4.2rem;
+    border-radius: 1000px;
+}
+
+#testimonial h2{
+    margin-bottom: 6rem;
+}
+
+#testimonial blockquote{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--bg-light-03);
+    padding: 3.2rem;
+    max-width: 54.2rem;
+}
+
+#testimonial path{
+    fill: var(--primary-color);
+}
+
+#testimonial p{
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+}
+
+#testimonial cite{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+#testimonial cite h5{
+    display: inline;
+    font-style: normal;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.swiper-slide {
+    height: auto;
+    padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet{
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.swiper-pagination-bullet-active{
+    background: var(--primary-color);
+}
+
 /*==== ABOUT =========================================== */
 #about{
     background-color: var(--brand-beige);
@@ -457,6 +527,7 @@ footer p{
 
     transform: translateY(100%);
     transition: 300ms;
+    z-index: 1000;
 }
 
 #backToTopButton.show{

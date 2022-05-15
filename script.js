@@ -71,8 +71,15 @@ ScrollReveal({
     #servicos .header,
     #servicos .card`)
 
-function sayMyName() {
-    console.log(name)
-}
-
-sayMyName("Pao")
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    // autoplay: {
+    //     delay: 5000,
+    // },
+    mousewheel: true,
+    keyboard: true,
+    loop: true,
+})
