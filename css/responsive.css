@@ -242,6 +242,11 @@
         width: 44.7rem;
     }
 
+    /*==== TESTIMONIAL =========================================== */
+    #testimonial .wrapper{
+        display: block;
+    }
+
     /*==== CONTACT ===========================================*/
     #contact h2{
         font-size: 4rem;

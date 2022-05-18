@@ -76,10 +76,15 @@ const swiper = new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination'
     },
-    // autoplay: {
-    //     delay: 5000,
-    // },
+    autoplay: {
+        delay: 5000,
+    },
     mousewheel: true,
     keyboard: true,
-    loop: true,
+    breakpoints: {
+        1024: {
+            slidesPerView: 2,
+            setWrapperSize: true
+        }
+    }
 })
