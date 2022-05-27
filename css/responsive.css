@@ -247,6 +247,20 @@
         display: block;
     }
 
+    .container2{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 16rem;
+        padding: 8rem 0;
+        gap: 15.7rem;
+    }
+
+    .container2 h3{
+        text-align: left;
+        max-width: 49.7rem;
+    }
+
     /*==== CONTACT ===========================================*/
     #contact h2{
         font-size: 4rem;
