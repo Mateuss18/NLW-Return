@@ -200,7 +200,10 @@
     }
 
     #home .col-b img#ImgMulherDeVerde{
-        width: 42rem;
+        margin-bottom: 2rem;
+        margin-top: 0;
+        border-radius: 10px;
+        width: 35rem;
     }
 
     /*==== SERIVCES ===========================================*/
@@ -228,12 +231,18 @@
         'B A'
     }
 
+    #about .col-b{
+        padding-right: 6.7rem;
+        display: flex;
+        align-items: center;
+    }
+
     #about .content p{
         margin: 0;
     }
 
     #about img{
-        padding-right: 6.7rem;
+        border-radius: 10px;
         width: 48rem;
     }
 
@@ -258,6 +267,7 @@
 
     .container2 h3{
         text-align: left;
+        font-size: 4rem;
         max-width: 49.7rem;
     }
 
@@ -279,6 +289,7 @@
     }
 
     #contact .col-b img{
+        border-radius: 10px;
         width: 48rem;
     }
 

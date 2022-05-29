@@ -5,8 +5,8 @@
 }
 
 :root {
-    --hue: 100;
-    --primary-color: hsl(var(--hue), 100%, 26%);
+    --hue: 210;
+    --primary-color: hsl(var(--hue), 100%, 28%);
     --hover-color: hsl(var(--hue), 100%, 14%);
     --bg-light: hsl(calc(var(--hue) - 22), 23%, 89%);
     --bg-light-02: hsl(calc(var(--hue) - 10), 12%, 97%);
@@ -18,7 +18,7 @@
     --swiper-theme-color: var(-primary-color);
     font-size: 62.5%;
 
-    --nav-height: 7.2rem
+    --nav-height: 7.2rem;
 }
 
 html {
@@ -26,7 +26,7 @@ html {
 }
 
 html,
-body{
+body {
     width: 100%;
     height: 100%;
 }
@@ -42,21 +42,21 @@ body {
     color: var(--gray-headline);
 }
 
-.wrapper{
+.wrapper {
     width: min(50rem, 100%);
     padding-inline: 2.4rem;
     margin-inline: auto;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-p{
+p {
     color: var(--gray-paragraph);
 }
 
@@ -64,7 +64,7 @@ section {
     padding-block: 10rem;
 }
 
-section header h4{
+section header h4 {
     color: var(--primary-color);
     font-size: 1.4rem;
     font-weight: bold;
@@ -75,18 +75,18 @@ section header h4{
     margin-bottom: 1.6rem;
 }
 
-section header h2{
+section header h2 {
     margin: 0 auto;
-    font-size: 3.0rem;
+    font-size: 3rem;
     font-weight: bold;
     color: var(--gray-headline);
 }
 
-section header h1{
+section header h1 {
     font-size: 3.4rem;
 }
 
-.btn-schedule{
+.btn-schedule {
     width: 263px;
     height: 52px;
 
@@ -107,10 +107,10 @@ section header h1{
     width: fit-content;
     gap: 1.6rem;
 
-    transition: background .3s;
+    transition: background 0.3s;
 }
 
-.btn-schedule:hover{
+.btn-schedule:hover {
     background-color: var(--hover-color);
 }
 
@@ -119,12 +119,12 @@ section header h1{
     gap: 3.2rem;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
 /*==== NAVIGATION ===========================================*/
-nav{
+nav {
     display: flex;
 
     height: var(--nav-height);
@@ -136,32 +136,32 @@ nav{
     z-index: 100;
 }
 
-nav .wrapper{
+nav .wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 nav.scroll {
     background-color: var(--primary-color);
 }
 
-nav.scroll svg:nth-child(1) path{
+nav.scroll svg:nth-child(1) path {
     fill: white;
 }
 
-nav.scroll .open-menu svg:nth-child(1) path{
+nav.scroll .open-menu svg:nth-child(1) path {
     stroke: white;
 }
 
-nav button{
+nav button {
     background: none;
     border: none;
     cursor: pointer;
 }
 
 nav .menu,
-nav .close-menu{
+nav .close-menu {
     position: fixed;
 }
 
@@ -169,21 +169,21 @@ nav .logo path[fill*="00856F"] {
     fill: var(--primary-color);
 }
 
-nav button.open-menu path{
+nav button.open-menu path {
     stroke: var(--primary-color);
 }
 
 /* ==== HOME =========================================== */
-#home{
+#home {
     padding-block: 0;
     padding-top: calc(4.1rem + var(--nav-height));
 }
 
-#home::before{
+#home::before {
     content: "";
     background-color: var(--bg-light);
     width: 100%;
-    height: calc(68% + var(--nav-height));
+    height: calc(78% + var(--nav-height));
     display: block;
 
     position: absolute;
@@ -192,16 +192,17 @@ nav button.open-menu path{
     z-index: -1;
 }
 
-#home p {
+#home .col-a p {
     margin: 2.4rem auto 3.2rem auto;
     font-size: 1.8rem;
 }
 
-#home #ImgMulherDeVerde{
-    width: 26.4rem;
+#home #ImgMulherDeVerde {
+    margin-top: 4.4rem;
+    width: 28.9rem;
     display: block;
     margin-inline: auto;
-    object-position: 0 2rem;
+    border-radius: 10px 10px 0 0;
 }
 
 #home .container {
@@ -211,6 +212,9 @@ nav button.open-menu path{
     padding: 5rem 0;
     margin: 0 auto;
     width: 100%;
+    gap: 6rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #home .container h2 {
@@ -225,42 +229,37 @@ nav button.open-menu path{
     font-weight: 400;
 }
 
-.container p:nth-child(2),
-.container p:nth-child(4) {
-    padding-bottom: 6rem;
-}
-
 /*==== MENU EXPANDED ===========================================*/
-body.menu-expanded{
+body.menu-expanded {
     overflow: hidden;
 }
 
-body.menu-expanded > :not(nav){
+body.menu-expanded > :not(nav) {
     visibility: hidden;
 }
 
 .menu,
 .close-menu,
 body.menu-expanded .open-menu {
-  opacity: 0;
-  visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
 }
 
-body.menu-expanded .open-menu{
+body.menu-expanded .open-menu {
     display: none;
 }
 
 body.menu-expanded .menu,
 body.menu-expanded .close-menu {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 .menu {
     transform: translateY(100%);
 }
 
-body.menu-expanded .menu{
+body.menu-expanded .menu {
     top: 0;
     left: 0;
     background-color: var(--primary-color);
@@ -272,7 +271,7 @@ body.menu-expanded .menu{
     transform: translateY(0);
 }
 
-body.menu-expanded .menu .sections{
+body.menu-expanded .menu .sections {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -281,13 +280,13 @@ body.menu-expanded .menu .sections{
     padding-bottom: 4.8rem;
 }
 
-body.menu-expanded .menu .sections li a{
+body.menu-expanded .menu .sections li a {
     font-size: 2.4rem;
     font-weight: 700;
     color: white;
 }
 
-body.menu-expanded .menu a.button{
+body.menu-expanded .menu a.button {
     background-color: white;
     color: var(--primary-color);
     text-transform: uppercase;
@@ -306,40 +305,40 @@ body.menu-expanded .menu a.button{
     transition: 300ms;
 }
 
-body.menu-expanded .menu a.button:hover{
+body.menu-expanded .menu a.button:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
-.menu .socialLinks{
+.menu .socialLinks {
     justify-content: center;
 }
 
 body.menu-expanded .logo,
-body.menu-expanded button{
+body.menu-expanded button {
     position: relative;
     z-index: 100;
 }
 
-body.menu-expanded .logo path{
+body.menu-expanded .logo path {
     fill: white;
 }
 
-body.menu-expanded button path{
+body.menu-expanded button path {
     stroke: white;
 }
 
 /*==== SERVICES =========================================== */
-#servicos h2{
+#servicos h2 {
     margin-bottom: 6rem;
 }
 
-#servicos .cards{
+#servicos .cards {
     display: grid;
     gap: 3.2rem;
 }
 
-#servicos .card{
+#servicos .card {
     display: grid;
     gap: 1.6rem;
     text-align: left;
@@ -349,34 +348,34 @@ body.menu-expanded button path{
     background-color: white;
 }
 
-#servicos .card h5{
+#servicos .card h5 {
     font-size: 2.4rem;
 }
 
-#servicos .card p{
+#servicos .card p {
     line-height: 150%;
 }
 
-#servicos .card circle{
+#servicos .card circle {
     fill: var(--bg-light);
 }
 
 /*==== TESTIMONIAL =========================================== */
-#testimonial{
+#testimonial {
     background-color: white;
     overflow: hidden;
 }
 
-#testimonial .testimonials img{
+#testimonial .testimonials img {
     width: 4.2rem;
     border-radius: 1000px;
 }
 
-#testimonial h2{
+#testimonial h2 {
     margin-bottom: 6rem;
 }
 
-#testimonial blockquote{
+#testimonial blockquote {
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -386,23 +385,23 @@ body.menu-expanded button path{
     max-width: 54.2rem;
 }
 
-#testimonial path{
+#testimonial path {
     fill: var(--primary-color);
 }
 
-#testimonial p{
+#testimonial p {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 150%;
 }
 
-#testimonial cite{
+#testimonial cite {
     display: flex;
     align-items: center;
     gap: 1.6rem;
 }
 
-#testimonial cite h5{
+#testimonial cite h5 {
     display: inline;
     font-style: normal;
     color: var(--primary-color);
@@ -415,26 +414,29 @@ body.menu-expanded button path{
     height: auto;
     padding: 4rem 1rem;
 }
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
     bottom: 0rem;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     width: 1rem;
     height: 1rem;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
     background: var(--primary-color);
 }
 
-.companies h4{
+.companies h4 {
     padding: 8rem 0 4rem 0;
     color: var(--gray-headline);
     font-size: 2.4rem;
 }
 
-.companies .logos{
+.companies .logos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -442,7 +444,7 @@ body.menu-expanded button path{
     gap: 5rem;
 }
 
-.companies .logos svg{
+.companies .logos svg {
     height: 3.1rem;
 }
 
@@ -459,65 +461,69 @@ body.menu-expanded button path{
     gap: 3.5rem;
 }
 
-.container2 h3{
-    font-size: 4rem;
+.container2 h3 {
+    font-size: 3.3rem;
 }
 
-.container2 a{
+.container2 a {
     background-color: white;
     color: var(--primary-color);
 }
 
-.container2 a:hover{
+.container2 a:hover {
     color: white;
 }
 
-#testimonial .btn-schedule:hover path{
+#testimonial .btn-schedule:hover path {
     fill: white;
 }
 
-.container2 a path{
+.container2 a path {
     fill: var(--primary-color);
 }
 
 /*==== ABOUT =========================================== */
-#about{
+#about {
     background-color: var(--brand-beige);
 }
 
-#about header{
+#about header {
     text-align: left;
 }
 
-#about h2{
+#about h2 {
     margin-left: 0;
     margin-bottom: 2.4rem;
 }
 
-#about .content p{
+#about .content p {
     margin-bottom: 6rem;
     line-height: 150%;
     text-align: justify;
 }
 
+#about img {
+    border-radius: 10px;
+}
+
 /*==== CONTACT =========================================== */
-#contact{
+#contact {
     text-align: left;
     background-color: white;
 }
 
-#contact h2{
+#contact h2 {
     line-height: 3.8rem;
 }
 
-#contact ul{
+#contact ul {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
     margin: 3.2rem 0;
 }
 
-#contact li{
+#contact li {
     display: flex;
     justify-content: flex-start;
     gap: 0.8rem;
@@ -527,17 +533,21 @@ body.menu-expanded button path{
     margin: 0 0 6rem 0;
 }
 
-#contact li path{
+#contact li path {
     stroke: var(--primary-color);
 }
 
-#contact .content img{
+#contact .content img {
     display: flex;
     margin: 0 auto;
 }
 
+#contact img {
+    border-radius: 10px;
+}
+
 /*==== FOOTER =========================================== */
-footer{
+footer {
     padding-block: 6rem;
     background-color: var(--primary-color);
 
@@ -545,23 +555,23 @@ footer{
     color: white;
 }
 
-footer .logo svg{
+footer .logo svg {
     width: 23.6rem;
     height: 3.1rem;
 }
 
-footer .logo path{
+footer .logo path {
     fill: white;
 }
 
-footer p{
+footer p {
     color: var(--brand-beige);
     padding: 2.4rem 0 3.2rem 0;
     line-height: 2;
 }
 
 /* BACK TO TOP */
-#backToTopButton{
+#backToTopButton {
     position: fixed;
 
     bottom: 1rem;
@@ -575,12 +585,12 @@ footer p{
     z-index: 1000;
 }
 
-#backToTopButton.show{
+#backToTopButton.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-#backToTopButton circle{
+#backToTopButton circle {
     fill: var(--primary-color);
 }
