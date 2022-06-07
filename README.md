@@ -14,9 +14,9 @@
 </p>
 
 ### [🌐 Rodar pagina do OdontoCare](https://mateuss18.github.io/CRUD-em-Javascript/)
-<img src="/images/CRUD.png">
-<img src="/images/create.png">
-<img src="/images/Dark-mode.png">
+<img src="/assets/Imagem_demonstração.png">
+<img src="/assets/README_desktop_GIF.gif">
+<img src="/assets/README_mobile_GIF.gif">
 
 >
 ---
