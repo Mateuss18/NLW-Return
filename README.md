@@ -3,17 +3,19 @@
 </h1>
 
 <h4 align="center">
-  Aplicação web desenvolvida no evento NLW Return, uma semana de desenvolvimento intensa feita pela Rocketseat. Neste projeto tive o contado pela primeira vez com display grid, foi utilizado ele para fazer a parte de responsividade. Algumas modificações foram feitas apos a NLW encerrar
+  Aplicação web desenvolvida no evento NLW Return, uma semana de desenvolvimento intensa feita pela Rocketseat. Neste projeto tive o contado pela primeira vez com display grid, foi utilizado ele para fazer a parte de responsividade. O projeto foi modificado e personalizado ao longo do desenvolvimento. 
 </h4>
 
 <p align="center">
-  <a href="#-rodar-pagina-do-crud">Demonstração</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-rodar-pagina-odontocare">Demonstração</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-licença">Licença</a>
 </p>
 
-### [🌐 Rodar pagina do OdontoCare](https://mateuss18.github.io/CRUD-em-Javascript/)
+<br>
+
+### [🌐 Rodar pagina OdontoCare](https://mateuss18.github.io/CRUD-em-Javascript/)
 <img src="/assets/Imagem_demonstração.png">
 <img src="/assets/README_desktop_GIF.gif">
 <img src="/assets/README_mobile_GIF.gif">
@@ -35,8 +37,15 @@
 ## 💡 Features
 
 - Carousel
+- Mobile First
 - ScrollReveal
 - Responsivo
+
+>
+---
+## 🎨 Figma na qual o projeto foi baseado
+
+https://www.figma.com/community/file/1102912263666619803
 
 ---
 
