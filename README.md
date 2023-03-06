@@ -16,7 +16,9 @@
 <br>
 
 ### [🌐 Rodar pagina OdontoCare](https://mateuss18.github.io/NLW-Return_OdontoCare/)
-<img src="/assets/Imagem_demonstração.png">
+
+![bandicam 2023-03-05 23-37-44-872](https://user-images.githubusercontent.com/71786964/223006950-2e22c8b9-4bfa-4838-b2d6-aec513066cfd.jpg)
+
 <img src="/assets/README_desktop_GIF.gif">
 <img src="/assets/README_mobile_GIF.gif">
 
